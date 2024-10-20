@@ -1,0 +1,22 @@
+.task {
+  padding: 10px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 8px;
+  margin: 10px 5px;
+  overflow: hidden;
+  &:hover {
+    background-color: rgb(47, 47, 47);
+  }
+  &.showing{
+    background-color: rgb(53, 53, 53);
+  }
+  button{
+    font-size: 0.8rem;
+    float: right;
+  }
+  .date{
+    font-size: 0.6rem;
+    float: right;
+  }
+}
