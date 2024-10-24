@@ -19,7 +19,7 @@ const FlexThree: FC<IFlexThreeProps> = ({aCompent, bCompent, cCompent}) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   useEffect(() => {
     if (containerRef.current) {
-      const width = containerRef.current.getBoundingClientRect().width;
+      const width = containerRef.current.getBoundingClientRect().width - 10;
       vpWidth.current = window.innerWidth;
       setAWidth(100);
       setBWidth((width - 100) / 2);

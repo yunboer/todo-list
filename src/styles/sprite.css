@@ -28,129 +28,51 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 512px;
   height: 512px;
 }
-.icon-angle-small-right {
+.icon-arrow-small-left {
   background-image: url(../assets/sprite.png);
   background-position: 0px -512px;
   width: 512px;
   height: 512px;
 }
-.icon-arrow-small-left {
+.icon-checkbox-ok {
   background-image: url(../assets/sprite.png);
   background-position: -512px -512px;
   width: 512px;
   height: 512px;
 }
-.icon-calendar-clock {
+.icon-envelope {
   background-image: url(../assets/sprite.png);
   background-position: -1024px 0px;
   width: 512px;
   height: 512px;
 }
-.icon-chart-histogram {
+.icon-home {
   background-image: url(../assets/sprite.png);
   background-position: -1024px -512px;
   width: 512px;
   height: 512px;
 }
-.icon-checkbox-ok {
+.icon-menu-burger {
   background-image: url(../assets/sprite.png);
   background-position: 0px -1024px;
   width: 512px;
   height: 512px;
 }
-.icon-coins {
+.icon-settings {
   background-image: url(../assets/sprite.png);
   background-position: -512px -1024px;
   width: 512px;
   height: 512px;
 }
-.icon-computer {
+.icon-trash {
   background-image: url(../assets/sprite.png);
   background-position: -1024px -1024px;
   width: 512px;
   height: 512px;
 }
-.icon-edit {
-  background-image: url(../assets/sprite.png);
-  background-position: -1536px 0px;
-  width: 512px;
-  height: 512px;
-}
-.icon-envelope {
-  background-image: url(../assets/sprite.png);
-  background-position: -1536px -512px;
-  width: 512px;
-  height: 512px;
-}
-.icon-eye-crossed {
-  background-image: url(../assets/sprite.png);
-  background-position: -1536px -1024px;
-  width: 512px;
-  height: 512px;
-}
-.icon-eye {
-  background-image: url(../assets/sprite.png);
-  background-position: 0px -1536px;
-  width: 512px;
-  height: 512px;
-}
-.icon-home {
-  background-image: url(../assets/sprite.png);
-  background-position: -512px -1536px;
-  width: 512px;
-  height: 512px;
-}
-.icon-list-check {
-  background-image: url(../assets/sprite.png);
-  background-position: -1024px -1536px;
-  width: 512px;
-  height: 512px;
-}
-.icon-menu-burger {
-  background-image: url(../assets/sprite.png);
-  background-position: -1536px -1536px;
-  width: 512px;
-  height: 512px;
-}
-.icon-menu-dots-vertical {
-  background-image: url(../assets/sprite.png);
-  background-position: -2048px 0px;
-  width: 512px;
-  height: 512px;
-}
-.icon-mobile-notch {
-  background-image: url(../assets/sprite.png);
-  background-position: -2048px -512px;
-  width: 512px;
-  height: 512px;
-}
-.icon-plus-small {
-  background-image: url(../assets/sprite.png);
-  background-position: -2048px -1024px;
-  width: 512px;
-  height: 512px;
-}
-.icon-settings {
-  background-image: url(../assets/sprite.png);
-  background-position: -2048px -1536px;
-  width: 512px;
-  height: 512px;
-}
-.icon-thumbtack {
-  background-image: url(../assets/sprite.png);
-  background-position: 0px -2048px;
-  width: 512px;
-  height: 512px;
-}
-.icon-trash {
-  background-image: url(../assets/sprite.png);
-  background-position: -512px -2048px;
-  width: 512px;
-  height: 512px;
-}
 .icon-user {
   background-image: url(../assets/sprite.png);
-  background-position: -1024px -2048px;
+  background-position: -1536px 0px;
   width: 512px;
   height: 512px;
 }

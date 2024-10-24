@@ -1,4 +1,4 @@
-export function getYMD() {
+function getYMD() {
   const today = new Date();
   const year = today.getFullYear();
   const month = String(today.getMonth() + 1).padStart(2, "0"); // 月份从0开始，所以需要+1
@@ -7,7 +7,7 @@ export function getYMD() {
   return `${year}-${month}-${day}`;
 }
 
-export function getShowDate(date: string) {
+function getShowDate(date: string) {
   const [year, month, day] = date.split("-");
   const thisYear = new Date().getFullYear();
   if (thisYear === Number(year)) {
@@ -17,10 +17,10 @@ export function getShowDate(date: string) {
   }
 }
 
-export function isToday(date: string) {
+function isToday(date: string) {
   return date === getYMD();
 }
-export function isTomorow(date: string) {
+function isTomorow(date: string) {
   const today = new Date();
   const tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
@@ -29,10 +29,12 @@ export function isTomorow(date: string) {
   const day = String(tomorrow.getDate()).padStart(2, "0");
   return date === `${year}-${month}-${day}`;
 }
-export function isLast7Days(date: string) {
+function isLast7Days(date: string) {
   const today = new Date();
   const todayTime = today.getTime();
   const dateObj = new Date(date);
   const dateObjTime = dateObj.getTime();
   return todayTime - dateObjTime <= 7 * 24 * 60 * 60 * 1000;
 }
+
+export {getYMD, getShowDate, isToday, isTomorow, isLast7Days};

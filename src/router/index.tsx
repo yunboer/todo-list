@@ -1,8 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
-import TodoList from "../pages/TodoListPage";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "../pages/App";
 import TodoListPage from "../pages/TodoListPage";
-import Test from "../pages/Test";
+import Test from "../pages/testpage/Test";
+import A from "../pages/testpage/A";
+import B from "../pages/testpage/B";
+import C from "../pages/testpage/C";
 
 const router = createBrowserRouter([
     {
@@ -10,31 +12,29 @@ const router = createBrowserRouter([
         element: <App/>,
         children:[
             {
+                path: "",
+                element: <Navigate to={"/todolist"} />,
+            },
+            {
                 path: "todolist",
-                element: <TodoList/>,
-                children:[
-                    {
-                        path: "all",
-                        element: <TodoListPage />
-                    },
-                    {
-                        path: "today",
-                        element: <TodoListPage />
-                    },
-                    {
-                        path: "tomorrow",
-                        element: <TodoListPage />
-                    },
-                    {
-                        path: "last7day",
-                        element: <TodoListPage />
-                    },
-                ]
+                element: <TodoListPage/>,
             },
             {
                 path: "test",
                 element: <Test />,
-            }
+            },
+            {
+                path: "a",
+                element: <A />,
+            },
+            {
+                path: "b",
+                element: <B />,
+            },
+            {
+                path: "c",
+                element: <C />,
+            },
         ]
     }
 ])

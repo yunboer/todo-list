@@ -1,7 +1,7 @@
 import { memo } from "react";
 import type { FC, ReactNode } from "react";
-import ITask from "../types/ITask";
-import { getShowDate } from "../utils/date";
+import ITask from "../../types/ITask";
+import { getShowDate } from "../../utils/date";
 import "./TaskItem.scss";
 
 interface ITaskItemProps {

@@ -1,12 +1,12 @@
-import React, { memo, useCallback, useMemo, useState } from "react";
+import React, { memo, useCallback, useEffect, useMemo, useState } from "react";
 import type { FC, ReactNode } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./TodoListPage.scss";
-import { getYMD, isLast7Days, isToday, isTomorow } from "../utils/date";
+import { getITaskList, getYMD, isLast7Days, isToday, isTomorow, setITaskList } from "../utils/";
 import ITask from "../types/ITask";
-import TaskItem from "../components/TaskItem";
-import FlexThree from "../components/FlexThree";
-import MdEditor from "../components/MdEditor";
+import TaskItem from "../components/element/TaskItem";
+import FlexThree from "../components/layout/FlexThree";
+import MdEditor from "../components/element/MdEditor";
 
 interface ITodoListPageProps {
   children?: ReactNode;
@@ -26,22 +26,12 @@ const filterMap = {
 const TodoListPage: FC<ITodoListPageProps> = () => {
   ///// A 列表的增删
   // 1 任务列表（TaskList）
-  const [taskList, setTaskList] = React.useState<ITask[]>([
-    {
-      title: "task1",
-      done: true,
-      content: "content1",
-      id: "first",
-      date: "2021-10-01",
-    },
-    {
-      title: "task2",
-      done: false,
-      content: "content2",
-      id: "second",
-      date: "2021-10-02",
-    },
-  ]);
+  const [taskList, setTaskList] = React.useState<ITask[]>(getITaskList());
+  useEffect(() => {
+    return () => {
+      setITaskList(taskList);
+    }
+  }, [taskList]);
   // 2 新任务（input）
   const [newTaskTitle, setNewTaskTitle] = React.useState<string>("");
   // 3 任务的增加
